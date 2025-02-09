@@ -1,0 +1,47 @@
+[
+  {
+    "players": 1,
+    "schemes": 1,
+    "masterminds": 1,
+    "villains": 1,
+    "henchmen": 1,
+    "heroes": 3,
+    "bystanders": 1
+  },
+  {
+    "players": 2,
+    "schemes": 1,
+    "masterminds": 1,
+    "villains": 2,
+    "henchmen": 1,
+    "heroes": 5,
+    "bystanders": 2
+  },
+  {
+    "players": 3,
+    "schemes": 1,
+    "masterminds": 1,
+    "villains": 3,
+    "henchmen": 1,
+    "heroes": 5,
+    "bystanders": 8
+  },
+  {
+    "players": 4,
+    "schemes": 1,
+    "masterminds": 1,
+    "villains": 3,
+    "henchmen": 2,
+    "heroes": 5,
+    "bystanders": 8
+  },
+  {
+    "players": 5,
+    "schemes": 1,
+    "masterminds": 1,
+    "villains": 4,
+    "henchmen": 2,
+    "heroes": 6,
+    "bystanders": 12
+  }
+]

@@ -1,0 +1,117 @@
+{
+  "id": 81,
+  "name": "Nightmare",
+  "vAttack": "6",
+  "vp": 6,
+  "cards": [
+    {
+      "name": "Nightmare",
+      "imageUrl": "https://nyc3.digitaloceanspaces.com/bageltop/CardImages/Masterminds/nightmare_01.png",
+      "abilities": [
+        [
+          "When you fight Nightmare in the ",
+          { "keyword": 76 },
+          ", instead of revealing a Tactic, KO one of your Heroes and Nightmare moves to the Mastermind Space."
+        ],
+        [{ "bold": "Always Leads" }, ": Fear Lords"],
+        [
+          { "bold": "Master Strike" },
+          ": Nightmare enters the ",
+          { "keyword": 76 },
+          ". If he was already there, each player discards a random card."
+        ],
+        [
+          { "bold": "Escape" },
+          ": Each player KOs one of their non-grey Heroes. Nightmare moves to the Mastermind space."
+        ]
+      ]
+    },
+    {
+      "name": "Epic Nightmare",
+      "imageUrl": "https://nyc3.digitaloceanspaces.com/bageltop/CardImages/Masterminds/nightmare_02.png",
+      "vAttack": "8",
+      "epic": true,
+      "abilities": [
+        [
+          "When you fight Nightmare in the ",
+          { "keyword": 76 },
+          ", instead of revealing a Tactic, KO one of your Heroes and Nightmare moves to the Mastermind Space."
+        ],
+        [{ "bold": "Always Leads" }, ": Fear Lords"],
+        [
+          { "bold": "Master Strike" },
+          ": Nightmare enters the ",
+          { "keyword": 76 },
+          ". If he was already there, each player discards two random cards."
+        ],
+        [
+          { "bold": "Escape" },
+          ": Each player KOs one of their non-grey Heroes. Nightmare moves to the Mastermind space."
+        ]
+      ]
+    },
+    {
+      "name": "Don't Fall Asleep",
+      "imageUrl": "https://nyc3.digitaloceanspaces.com/bageltop/CardImages/Masterminds/nightmare_04.png",
+      "tactic": true,
+      "abilities": [
+        [
+          { "bold": "Fight" },
+          ": Each other player discards two cards with ",
+          { "icon": 2 },
+          " icons. Nightmare enters the ",
+          { "keyword": 76 },
+          "."
+        ]
+      ]
+    },
+    {
+      "name": "Dream Weaver",
+      "imageUrl": "https://nyc3.digitaloceanspaces.com/bageltop/CardImages/Masterminds/nightmare_05.png",
+      "tactic": true,
+      "abilities": [
+        [
+          { "bold": "Fight" },
+          ": For each of your ",
+          { "hc": 3 },
+          " Heroes, rescue a Bystander. Nightmare enters the ",
+          { "keyword": 76 },
+          "."
+        ]
+      ]
+    },
+    {
+      "name": "Night Terrors",
+      "imageUrl": "https://nyc3.digitaloceanspaces.com/bageltop/CardImages/Masterminds/nightmare_06.png",
+      "tactic": true,
+      "abilities": [
+        [
+          { "bold": "Fight" },
+          ": Each other player reveals a ",
+          { "hc": 1 },
+          " Hero or gains a Wound. Nightmare enters the ",
+          { "keyword": 76 },
+          "."
+        ]
+      ]
+    },
+    {
+      "name": "Deadly Waking Nightmares",
+      "imageUrl": "https://nyc3.digitaloceanspaces.com/bageltop/CardImages/Masterminds/nightmare_03.png",
+      "tactic": true,
+      "abilities": [
+        [
+          { "bold": "Fight" },
+          ": Each other player KOs one of their non-grey Heroes. Each player who KO'd a Hero this way draws a card. Nightmare enters the ",
+          { "keyword": 76 },
+          "."
+        ]
+      ]
+    }
+  ],
+  "set": "doctorstrange",
+  "_id": "UJCzjhNRhyJCYYo8",
+  "keywords": ["astralplane"],
+  "affiliation": "",
+  "always_leads": "Fear Lords"
+}

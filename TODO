@@ -1,0 +1,16 @@
+☐ build a migration for a games table
+    * id (autoinc primary key)
+    * schemes (json)
+    * masterminds (json)
+    * villains (json)
+    * henchmen (json)
+    * heroes (json)
+    * setup (json)
+
+☐ build a Game model
+    * candidates
+    * deck
+    ☐ build logic to build deck from candidates
+    ☐ figure out how to manage handlers (code snippets to modify setup & deck), I think I want to do them as Controllers, but I'm not sure if that makes sense. That's our first topic of discussion for this session.
+    ☐ build logic for handlers (these modify the setup & deck based on the parameters for the item they're associated with: usually schemes, occasionally a mastermind or villain [so far, might change with future expansions])
+    ☐ make sure each element of the setup is fulfilled after the handlers run (e.g.: proper number of schemes, masterminds, villains, henchmen, heroes)

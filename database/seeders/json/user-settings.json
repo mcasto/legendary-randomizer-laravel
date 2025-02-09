@@ -1,0 +1,217 @@
+{
+  "isAdmin": true,
+  "expansions": [
+    "coreset",
+    "ff",
+    "msaw",
+    "annihilation",
+    "antman",
+    "blackpanther",
+    "blackwidow",
+    "captainamerica",
+    "champions",
+    "civilwar",
+    "darkcity",
+    "deadpool",
+    "dimensions",
+    "doctorstrange",
+    "gotg",
+    "heroesofasgard",
+    "intothecosmos",
+    "2099",
+    "msgotg",
+    "msis",
+    "mswi",
+    "messiahcomplex",
+    "midnightsons",
+    "noir",
+    "pttr",
+    "realmofkings",
+    "revelations",
+    "shield",
+    "sw1",
+    "sw2",
+    "spiderhomecoming",
+    "newmutants",
+    "venom",
+    "wwhulk",
+    "xmen"
+  ],
+  "usePlayedCount": true,
+  "useEpics": false,
+  "usePortable": false,
+  "displaySettings": {
+    "bgColors": {
+      "henchmen": "#b2b2b2",
+      "heroes": "white",
+      "masterminds": "#002e5c",
+      "schemes": "#4c4c4c",
+      "villains": "#f50000"
+    },
+    "enemiesLayout": ["masterminds", "villains", "henchmen", "schemes"],
+    "textColors": {
+      "henchmen": "#ffffff",
+      "heroes": "black",
+      "masterminds": "#ffffff",
+      "schemes": "#ffffff",
+      "villains": "#ffffff"
+    }
+  },
+  "token": "13b8f65dfd09daa5a1",
+  "game": {
+    "deck": {
+      "schemes": [
+        {
+          "primary": "Collect an Interstellar Zoo",
+          "secondary": false,
+          "expansion": "mswi",
+          "colors": [],
+          "special": false,
+          "id": 176,
+          "played": 1,
+          "table": "schemes"
+        }
+      ],
+      "masterminds": [
+        {
+          "primary": "J. Jonah Jameson",
+          "secondary": "Spider-Slayer",
+          "expansion": "dimensions",
+          "colors": [],
+          "special": false,
+          "id": 61,
+          "played": 1,
+          "table": "masterminds"
+        }
+      ],
+      "villains": [
+        {
+          "primary": "Taskmaster's Thunderbolts",
+          "secondary": false,
+          "expansion": "blackwidow",
+          "colors": [],
+          "special": false,
+          "id": 108,
+          "played": 1,
+          "table": "villains"
+        },
+        {
+          "primary": "Zola's Creations",
+          "secondary": false,
+          "expansion": "captainamerica",
+          "colors": [],
+          "special": false,
+          "id": 40,
+          "played": 1,
+          "table": "villains"
+        }
+      ],
+      "henchmen": [
+        {
+          "primary": "Spider-Slayer",
+          "secondary": false,
+          "expansion": "dimensions",
+          "colors": [],
+          "special": false,
+          "id": 12,
+          "played": 1,
+          "table": "henchmen"
+        }
+      ],
+      "heroes": [
+        {
+          "primary": "Deadpool",
+          "secondary": "Mercs for Money",
+          "expansion": "deadpool",
+          "colors": [
+            "/images/hero-classes/5.svg",
+            "/images/hero-classes/2.svg",
+            "/images/hero-classes/1.svg",
+            "/images/hero-classes/4.svg"
+          ],
+          "special": false,
+          "id": 123,
+          "played": 1,
+          "table": "heroes"
+        },
+        {
+          "primary": "Falcon & Winter Soldier",
+          "secondary": "Avengers",
+          "expansion": "blackwidow",
+          "colors": [
+            "/images/hero-classes/3.svg",
+            "/images/hero-classes/4.svg",
+            "/images/hero-classes/2.svg",
+            "/images/hero-classes/5.svg",
+            "/images/hero-classes/1.svg"
+          ],
+          "special": false,
+          "id": 254,
+          "played": 1,
+          "table": "heroes"
+        },
+        {
+          "primary": "Hellcat",
+          "secondary": "Avengers",
+          "expansion": "revelations",
+          "colors": [
+            "/images/hero-classes/2.svg",
+            "/images/hero-classes/1.svg"
+          ],
+          "special": false,
+          "id": 187,
+          "played": 1,
+          "table": "heroes"
+        },
+        {
+          "primary": "Queen Storm of Wakanda",
+          "secondary": "Heroes of Wakanda",
+          "expansion": "blackpanther",
+          "colors": [
+            "/images/hero-classes/1.svg",
+            "/images/hero-classes/3.svg"
+          ],
+          "special": false,
+          "id": 246,
+          "played": 1,
+          "table": "heroes"
+        },
+        {
+          "primary": "Quicksilver",
+          "secondary": "Avengers",
+          "expansion": "revelations",
+          "colors": [
+            "/images/hero-classes/2.svg",
+            "/images/hero-classes/4.svg"
+          ],
+          "special": false,
+          "id": 189,
+          "played": 1,
+          "table": "heroes"
+        }
+      ]
+    },
+    "setup": {
+      "players": 2,
+      "schemes": 1,
+      "masterminds": 1,
+      "villains": 2,
+      "henchmen": 1,
+      "heroes": 5,
+      "bystanders": 2,
+      "riseOfLivingDead": {
+        "schemes": ["Marvel Zombies"],
+        "masterminds": ["Zombie Green Goblin", "Zombie Scarlet Witch"],
+        "villains": ["Zombie Avengers", "Deadlands, The"],
+        "henchmen": ["Ghost Racers"],
+        "heroes": [],
+        "keywords": [],
+        "classes": [],
+        "rules": [],
+        "teams": []
+      },
+      "handlerFound": {},
+      "expires": 1738509940624
+    }
+  }
+}
