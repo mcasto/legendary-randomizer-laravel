@@ -4,6 +4,11 @@ namespace Tests\Feature;
 // use Illuminate\Foundation\Testing\RefreshDatabase;
 
 use App\Core\GameConfiguration;
+use App\Core\Testing\Seeders\SeedHenchmen;
+use App\Core\Testing\Seeders\SeedHeroes;
+use App\Core\Testing\Seeders\SeedMasterminds;
+use App\Core\Testing\Seeders\SeedSchemes;
+use App\Core\Testing\Seeders\SeedVillains;
 use App\Core\User;
 use Tests\TestCase;
 
@@ -19,7 +24,15 @@ class GameConfigTest extends TestCase
   $numPlayers = 2;
 
   // dataSet
-  $dataset = ['heroes' => ['a', 'b', 'c'], 'villains' => [1, 2, 3], 'schemes' => ['s1', 's2'], 'masterminds' => ['m1', 'm2', 'm3'], 'henchmen' => ['h1', 'h2'], 'defaultSetups' => [2 => ['schemes' => 1, 'masterminds' => 1, 'villains' => 2, 'henchmen' => 1, 'heroes' => 5]]];
+  $dataset = [
+   'heroes'      => (new SeedHeroes)->seed(),
+   'villains'    => (new SeedVillains)->seed(),
+   'schemes'     => (new SeedSchemes)->seed(),
+   'masterminds' => (new SeedMasterminds)->seed(),
+   'henchmen'    => (new SeedHenchmen)->seed(),
+  ];
+
+  // mock data
 
   // user -- authenticated user provides expansions owned, use epic masterminds, use weighted shuffle
   // $user = ['settings' => ['expansions' => [], 'useEpics' => true, 'useWeighted' => true]];
