@@ -3,7 +3,16 @@ namespace App\Core;
 
 class User
 {
- private $useEpics, $useWeightedShuffle, $expansions = [];
+ private bool $useEpics           = false;
+ private bool $useWeightedShuffle = false;
+ private array $expansions        = [];
+
+ public function __construct(bool $useEpics = false, bool $useWeightedShuffle = false, array $expansions = [])
+ {
+  $this->useEpics           = $useEpics;
+  $this->useWeightedShuffle = $useWeightedShuffle;
+  $this->expansions         = $expansions;
+ }
 
  public function setUseEpics(bool $value): void
  {
@@ -20,8 +29,8 @@ class User
   $this->expansions = $expansions;
  }
 
- public function isValid()
+ public function isValid(): bool
  {
-  return count($this->expansions) > 0 ? 'expansions-found' : false;
+  return count($this->expansions) > 0;
  }
 }
