@@ -35,8 +35,12 @@ class GameConfigTest extends TestCase
   $gameConfiguration->setUser($user);
   $gameConfiguration->setData($dataset);
 
-  // Assert
+  // Assert--I changed to "assertsEqual" and returned text for true so I would know which assertion failed
+
+  // *** Should this be part of a second test? *************
   $this->assertEquals($user->isValid(), 'expansions-found');
+  // *******************************************************
+
   $this->assertEquals($gameConfiguration->isValid(), 'config-valid');
  }
 }
