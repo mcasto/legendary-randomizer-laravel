@@ -22,6 +22,6 @@ class User
 
  public function isValid()
  {
-  return count($this->expansions) > 0 ? 'user-valid' : false;
+  return count($this->expansions) > 0 ? 'expansions-found' : false;
  }
 }

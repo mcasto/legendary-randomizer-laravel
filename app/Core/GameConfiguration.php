@@ -3,14 +3,21 @@ namespace App\Core;
 
 class GameConfiguration
 {
- private $numPlayers, $user, $dataSet;
+ private $numPlayers, $user, $dataset;
 
- public function __construct($numPlayers, $dataSet, User $user)
+ public function setNumPlayers($numPlayers): void
  {
   $this->numPlayers = $numPlayers;
-  $this->user       = $user;
-  $this->dataSet    = $dataSet;
-  $this->user       = new User;
+ }
+
+ public function setUser(User $user): void
+ {
+  $this->user = $user;
+ }
+
+ public function setData($data): void
+ {
+  $this->dataset = $data;
  }
 
  public function isValid()
