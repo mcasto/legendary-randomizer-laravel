@@ -1,9 +1,23 @@
 <?php
 namespace App\Core;
 
+use App\Models\DefaultSetups;
+
 class GameConfiguration
 {
  private $numPlayers, $user, $dataset;
+
+ public function generateGame(): Game
+ {
+  $setup = DefaultSetups::getSetup($this->numPlayers);
+
+  $deck = new Deck($setup);
+
+  // get default settings for num players
+  $game = new Game($setup, $deck);
+
+  return $game;
+ }
 
  public function setNumPlayers($numPlayers): void
  {

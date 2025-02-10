@@ -30,12 +30,7 @@ class GameConfigTest extends TestCase
    'schemes'     => (new SeedSchemes)->seed(),
    'masterminds' => (new SeedMasterminds)->seed(),
    'henchmen'    => (new SeedHenchmen)->seed(),
-  ];
-
-  // mock data
-
-  // user -- authenticated user provides expansions owned, use epic masterminds, use weighted shuffle
-  // $user = ['settings' => ['expansions' => [], 'useEpics' => true, 'useWeighted' => true]];
+  ]; // full list of entities
 
   $user = new User();
   $user->setUseEpics(false);
@@ -48,9 +43,11 @@ class GameConfigTest extends TestCase
   $gameConfiguration->setUser($user);
   $gameConfiguration->setData($dataset);
 
+  $gameConfiguration->generateGame();
+
   // Assert--I changed to "assertsEqual" and returned text for true so I would know which assertion failed
 
-  // *** Should this be part of a second test? *************
+  // mc-note: *** Should this be part of a second test? ****
   $this->assertEquals($user->isValid(), 'expansions-found');
   // *******************************************************
 

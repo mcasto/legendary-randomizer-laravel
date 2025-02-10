@@ -8,8 +8,8 @@ class DefaultSetups extends Model
  protected $table   = 'default_setups';
  public $timestamps = false;
 
- public static function getSetup($numPlayers)
+ public static function getSetup(int $numPlayers)
  {
-  return DefaultSetups::where('players', intval($numPlayers))->first();
+  return DefaultSetups::where('players', $numPlayers)->first()->toArray();
  }
 }
