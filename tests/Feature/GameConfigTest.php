@@ -24,7 +24,7 @@ class GameConfigTest extends TestCase
   $numPlayers = 2;
 
   // dataSet
-  $dataset = [
+  $masterList = [
    'heroes'      => (new SeedHeroes)->seed(),
    'villains'    => (new SeedVillains)->seed(),
    'schemes'     => (new SeedSchemes)->seed(),
@@ -41,9 +41,9 @@ class GameConfigTest extends TestCase
   $gameConfiguration = new GameConfiguration();
   $gameConfiguration->setNumPlayers($numPlayers);
   $gameConfiguration->setUser($user);
-  $gameConfiguration->setData($dataset);
+  $gameConfiguration->setMasterList($masterList);
 
-  $gameConfiguration->generateGame();
+  $game = $gameConfiguration->generateGame();
 
   // Assert--I changed to "assertsEqual" and returned text for true so I would know which assertion failed
 
@@ -51,6 +51,6 @@ class GameConfigTest extends TestCase
   $this->assertEquals($user->isValid(), 'expansions-found');
   // *******************************************************
 
-  $this->assertEquals($gameConfiguration->isValid(), 'config-valid');
+  $this->assertEquals($game->isValid(), 'game-valid');
  }
 }

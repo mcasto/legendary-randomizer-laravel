@@ -5,18 +5,14 @@ use App\Models\DefaultSetups;
 
 class GameConfiguration
 {
- private $numPlayers, $user, $dataset;
+ private $numPlayers, $user, $masterList;
 
  public function generateGame(): Game
  {
   $setup = DefaultSetups::getSetup($this->numPlayers);
+  $deck  = new Deck($setup);
 
-  $deck = new Deck($setup);
-
-  // get default settings for num players
-  $game = new Game($setup, $deck);
-
-  return $game;
+  return new Game($setup, $deck, $this->masterList, $this->user);
  }
 
  public function setNumPlayers($numPlayers): void
@@ -29,12 +25,12 @@ class GameConfiguration
   $this->user = $user;
  }
 
- public function setData($data): void
+ public function setMasterList($masterList): void
  {
-  $this->dataset = $data;
+  $this->masterList = $masterList;
  }
 
- public function isValid()
+ public function isValid(): string | bool
  {
   if ($this->numPlayers < 1 || $this->numPlayers > 5) {
    return false;

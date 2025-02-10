@@ -29,8 +29,8 @@ class User
   $this->expansions = $expansions;
  }
 
- public function isValid(): bool
+ public function isValid(): string | bool
  {
-  return count($this->expansions) > 0;
+  return count($this->expansions) > 0 ? 'expansions-found' : false;
  }
 }
