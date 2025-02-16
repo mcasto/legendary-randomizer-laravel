@@ -1,34 +1,58 @@
 <?php
 namespace App\Core;
 
-// I originally thought to have a type property here to designate "schemes", "masterminds", etc. Then I realized each entity type will eventually have other properties specific to it, like Hero will have a team property, so I decided to abstract it one layer farther.
+use RecursiveArrayIterator;
+use RecursiveIteratorIterator;
 
 class Entity
 {
- private int $id           = -1;
- private string $name      = '';
- private string $expansion = '';
+ public int $masterStrikeId;
+ public string $name;
+ public array $cards;
+ public string $set;
+ public array $keywords;
 
- public function __construct(int $id, string $name, string $expansion)
+ public function getKeywords($dataProvider): array
  {
-  $this->$id        = $id;
-  $this->$name      = $name;
-  $this->$expansion = $expansion;
+  $keywords = [];
+
+  $iterator = new RecursiveIteratorIterator(
+   new RecursiveArrayIterator($this->cards),
+   RecursiveIteratorIterator::SELF_FIRST
+  );
+
+  foreach ($iterator as $key => $value) {
+   if ($key === 'keyword') {
+    $keywords[] = $dataProvider->getKeyword($value);
+   }
+  }
+
+  return array_unique($keywords);
  }
 
- public function setId(int $id): void
+ public function validEntity(): array
  {
-  $this->id = $id;
- }
+  $errors = [];
 
- public function setName(string $name): void
- {
-  $this->name = $name;
- }
+  $name = $this->name ?? '';
+  $set  = $this->set ?? '';
 
- public function setExpansions(string $expansion): void
- {
-  $this->expansion = $expansion;
- }
+  if (! $this->masterStrikeId) {
+   $errors[] = 'Invalid master strike id';
+  }
 
+  if ($name == '') {
+   $errors[] = 'Invalid name';
+  }
+
+  if (! $this->cards || count($this->cards) == 0) {
+   $errors[] = 'No cards';
+  }
+
+  if ($set == '') {
+   $errors[] = 'Invalid set';
+  }
+
+  return $errors;
+ }
 }

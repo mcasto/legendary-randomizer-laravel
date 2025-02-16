@@ -3,9 +3,9 @@ namespace App\Core;
 
 class User
 {
- private bool $useEpics           = false;
- private bool $useWeightedShuffle = false;
- private array $expansions        = [];
+ public bool $useEpics           = false;
+ public bool $useWeightedShuffle = false;
+ public array $expansions        = [];
 
  public function __construct(bool $useEpics = false, bool $useWeightedShuffle = false, array $expansions = [])
  {
@@ -33,4 +33,5 @@ class User
  {
   return count($this->expansions) > 0 ? 'expansions-found' : false;
  }
+
 }

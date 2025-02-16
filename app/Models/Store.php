@@ -45,4 +45,20 @@ class Store extends Model
   return $items;
  }
 
+ public static function getSampleExpansions(): array
+ {
+  $items = Store::all()
+   ->where('list', '==', 'expansions')
+   ->toArray();
+
+  $items = array_map(function ($item) {
+   return json_decode($item['rec']);
+  }, $items);
+
+  $items = collect($items);
+
+  $numExpansions = rand(3, 20);
+
+  return $items->random($numExpansions)->toArray();
+ }
 }

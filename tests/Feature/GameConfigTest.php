@@ -4,12 +4,9 @@ namespace Tests\Feature;
 // use Illuminate\Foundation\Testing\RefreshDatabase;
 
 use App\Core\GameConfiguration;
-use App\Core\Testing\Seeders\SeedHenchmen;
-use App\Core\Testing\Seeders\SeedHeroes;
-use App\Core\Testing\Seeders\SeedMasterminds;
-use App\Core\Testing\Seeders\SeedSchemes;
-use App\Core\Testing\Seeders\SeedVillains;
+use App\Core\GetMasterList;
 use App\Core\User;
+use App\Models\Store;
 use Tests\TestCase;
 
 class GameConfigTest extends TestCase
@@ -23,19 +20,13 @@ class GameConfigTest extends TestCase
   //  numPlayers
   $numPlayers = 2;
 
-  // dataSet
-  $masterList = [
-   'heroes'      => (new SeedHeroes)->seed(),
-   'villains'    => (new SeedVillains)->seed(),
-   'schemes'     => (new SeedSchemes)->seed(),
-   'masterminds' => (new SeedMasterminds)->seed(),
-   'henchmen'    => (new SeedHenchmen)->seed(),
-  ]; // full list of entities
-
   $user = new User();
   $user->setUseEpics(false);
   $user->setUseWeightedShuffle(true);
-  $user->setExpansions([1]);
+  $user->setExpansions(Store::getSampleExpansions());
+
+  // dataSet
+  $masterList = GetMasterList::getSchemes($user);
 
   // Act
   $gameConfiguration = new GameConfiguration();
